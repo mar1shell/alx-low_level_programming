@@ -9,7 +9,7 @@ int main(void)
 {
 	int i;
 
-	i = 123;
+	i = 122;
 	while (i > 97)
 	{
 		putchar((char) i);
