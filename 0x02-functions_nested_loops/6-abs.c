@@ -3,14 +3,18 @@
 /**
  * _abs - entry point
  * @n: number
- * Return: 0
+ * Return: always n
  */
 
 int _abs(int n)
 {
 	if (n >= 0)
-		_putchar(n);
+	{
+		return (n);
+	}
 	else
-		_putchar(-n);
-	return (0);
+	{
+		n = -n;
+		return (n);
+	}
 }
