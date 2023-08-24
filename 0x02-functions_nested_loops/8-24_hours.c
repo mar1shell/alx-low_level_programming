@@ -2,7 +2,7 @@
 
 /**
  * jack_bauer - entry point
- * Return: 0
+ * Return: void
  */
 
 void jack_bauer(void)
@@ -26,3 +26,4 @@ void jack_bauer(void)
 		}
 		i++;
 	}
+}
