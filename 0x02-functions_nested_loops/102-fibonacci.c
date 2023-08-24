@@ -13,7 +13,7 @@ int main(void)
 	j = 2;
 	m = 2;
 	printf("%lu, %lu, ", i, j);
-	while (m < 59)
+	while (m < 48)
 	{
 		sum = i + j;
 		i = j;
