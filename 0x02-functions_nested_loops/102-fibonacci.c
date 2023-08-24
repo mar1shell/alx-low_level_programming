@@ -23,4 +23,5 @@ int main(void)
 	}
 	sum = i + j;
 	printf("%lu\n", sum);
+	return (0);
 }
