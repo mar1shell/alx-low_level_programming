@@ -22,7 +22,7 @@ void times_table(void)
 				if (j != 9)
 				{
 					_putchar(',');
-					_putchar((char) 32);
+					_putchar(' ');
 				}
 			}
 			else
@@ -32,7 +32,7 @@ void times_table(void)
 				if (j != 9)
 				{
 					_putchar(',');
-					_putchar((char) 32);
+					_putchar(' ');
 				}
 			}
 			j++;
