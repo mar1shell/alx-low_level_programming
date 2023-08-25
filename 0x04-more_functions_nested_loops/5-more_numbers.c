@@ -21,6 +21,8 @@ void more_numbers(void)
 				k -= 10;
 				_putchar('1');
 			}
+			if (k < 0)
+				k += 10;
 			_putchar(k + '0');
 			j++;
 			k++;
