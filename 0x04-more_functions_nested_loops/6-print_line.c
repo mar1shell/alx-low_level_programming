@@ -12,7 +12,7 @@ void print_line(int n)
 
 	i = 0;
 	if (n < 0)
-		_putchar((car) 10);
+		_putchar((char) 10);
 	else
 	{
 		while (i < n)
