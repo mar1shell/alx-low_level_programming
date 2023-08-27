@@ -16,7 +16,10 @@ void print_rev(char *s)
 	while (1 > 0)
 	{
 		if (*(s + j) != (char) 0)
+		{
 			k++;
+			j++;
+		}
 		else
 			break;
 	}
