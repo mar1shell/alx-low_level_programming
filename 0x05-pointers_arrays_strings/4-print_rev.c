@@ -12,9 +12,10 @@ void print_rev(char *s)
 	int j, k, f;
 
 	k = 0;
+	j = 0;
 	while (1 > 0)
 	{
-		if (*(s + i) != (char) 0)
+		if (*(s + j) != (char) 0)
 			k++;
 		else
 			break;
