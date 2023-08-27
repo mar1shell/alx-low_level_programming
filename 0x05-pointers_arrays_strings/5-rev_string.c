@@ -31,7 +31,7 @@ void rev_string(char *s)
 	f = k;
 	for (i = 0; i <= k; i++)
 	{
-		*(s + f) = *(t + i);
+		*(s + i) = *(t + f);
 		f--;
 	}
 }
