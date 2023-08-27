@@ -12,9 +12,10 @@ void rev_string(char *s)
 {
 	int i, f, k;
 
-	char *t = NULL;
+	char a[150];
 
-	t = s;
+	for (i = 0; i < 150; i++)
+		a[i] = 0;
 	i = 0;
 	k = 0;
 	while (1 > 0)
@@ -28,10 +29,12 @@ void rev_string(char *s)
 			break;
 	}
 	k--;
+	for (i = 0; i <= k; i++)
+		a[i] = *(s + i);
 	f = k;
 	for (i = 0; i <= k; i++)
 	{
-		*(s + i) = *(t + f);
+		*(s + i) = a[f];
 		f--;
 	}
 }
