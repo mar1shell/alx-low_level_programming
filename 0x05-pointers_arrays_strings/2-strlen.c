@@ -13,9 +13,9 @@ int _strlen(char *s)
 
 	i = 0;
 	sum = 0;
-	while (true)
+	while (1 > 0)
 	{
-		if (*(p + i) != (char) 0)
+		if (*(s + i) != (char) 0)
 		{
 			sum++;
 			i++;
