@@ -20,7 +20,7 @@ int digits_counter(char *t);
 */
 int _atoi(char *s)
 {
-	int i, n, r;
+	int i, n, r, j;
 
 	r = 0;
 	i = 0;
@@ -32,9 +32,9 @@ int _atoi(char *s)
 			int res;
 
 			res = 1;
-			for (int j = 0; j < n; j++)
+			for (j = 0; j < n; j++)
 				res *= 10;
-			r = r + ((*(s + i)) * res;
+			r = r + ((*(s + i)) * res);
 			n--;
 			i++;
 		}
