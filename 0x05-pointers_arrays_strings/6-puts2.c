@@ -11,6 +11,8 @@ void puts2(char *str)
 {
 	int c, i;
 
+	c = 0;
+	i = 0;
 	while (1 > 0)
 	{
 		if (*(str + i) != (char) 0)
