@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
 * _atoi -converts a str to an int
@@ -30,7 +29,12 @@ int _atoi(char *s)
 	{
 		if (*(s + i) > 47 && *(s + i) < 58)
 		{
-			r = r + ((*(s + i)) * pow(10, n));
+			int res;
+
+			res = 1;
+			for (int j = 0; j < n; j++)
+				res *= 10;
+			r = r + ((*(s + i)) * res;
 			n--;
 			i++;
 		}
