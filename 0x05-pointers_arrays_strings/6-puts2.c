@@ -22,9 +22,11 @@ void puts2(char *str)
 			break;
 	}
 	c--;
-	for (i = 0; i <= c; i = i + 2)
+	i = 0;
+	while(i <= c)
 	{
 		_putchar(*(str + i));
+		i = i + 2;
 	}
 	_putchar((char) 10);
 }
