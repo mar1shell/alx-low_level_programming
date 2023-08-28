@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * puts2 - function to print odd indexed chrachters
@@ -22,7 +22,7 @@ void puts2(char *str)
 			break;
 	}
 	c--;
-	for (i = 0; i <= c; i + 2)
+	for (i = 0; i <= c; i = i + 2)
 	{
 		_putchar(*(str + i));
 	}
