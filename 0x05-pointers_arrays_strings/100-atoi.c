@@ -30,7 +30,7 @@ int _atoi(char *s)
 	{
 		if (*(s + i) > 47 && *(s + i) < 58)
 		{
-			r = r + ((*(s + i)) * pow(10, n);
+			r = r + ((*(s + i)) * pow(10, n));
 			n--;
 			i++;
 		}
