@@ -1,64 +1,45 @@
 #include "main.h"
 
 /**
-* _atoi -converts a str to an int
-* @s : str
-* digits_counter - function that returns number
-* of digits in str
-* @t : str
-* Return : digits found in str
-*/
+ * _atoi - string to digits
+ * @s: string
+ * Return: int
+ */
 
-int digits_counter(char *t);
-/**
-* _atoi -converts a str to an int
-* @s : str
-* digits_counter - function that returns number
-* of digits in str
-* @t : str
-* Return : digits found in str
-*/
+int strlen(char *t);
+
 int _atoi(char *s)
 {
-	int i, n, r, j;
+	int c, i, a;
 
+	c = strlen(s);
+	a = 1;
 	r = 0;
-	i = 0;
-	n = digits_counter(s) - 1;
-	while (*(s + i) != (char) 0)
+	for (i = 0, i < c, i++)
 	{
-		if (*(s + i) > 47 && *(s + i) < 58)
-		{
-			int res;
-
-			res = 1;
-			for (j = 0; j < n; j++)
-				res *= 10;
-			r = r + ((*(s + i)) * res);
-			n--;
-			i++;
-		}
-		else
-			break;
+		if (*(s + i) == '-')
+			a *= -1;
+		if (*(s + i) >= '0' && *(s + i) <= '9')
+			r = (r * 10) + *(s + i);
 	}
+	r *= a;
 	return (r);
 }
 
-int digits_counter(char *t)
-{
-	int re, i;
+/**
+ * strlen - length of string
+ * @t: string
+ * Return: int
+ */
 
-	re = 0;
-	i = 0;
+int strlen(char *t)
+{
+	int x;
+
 	while (*(t + i) != (char) 0)
 	{
-		if (*(t + i) > 47 && *(t + i) < 58)
-		{
-			i++;
-			re++;
-		}
-		else
-			break;
+		x++;
+		i++;
 	}
-	return (re);
+	return (x);
 }
