@@ -13,7 +13,9 @@ void _puts_recursion(char *s)
 	i = 0;
 	if (*(s + i) == (char)  0)
 		return;
-	_putchar((s + i));
+	
+	_putchar(*(s + i));
 	i++;
-	_puts_recursion(*(s + i));
+
+	_puts_recursion(s + i);
 }
