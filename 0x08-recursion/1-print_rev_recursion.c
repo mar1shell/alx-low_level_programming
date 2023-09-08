@@ -19,7 +19,7 @@ void recurse(char *s, int length)
 {
 	if (length <= 0)
 		return;
-	printf("%c", *(s + length - 1));
+	_putchar(*(s + length - 1));
 	recurse(s, length - 1);
 }
 
