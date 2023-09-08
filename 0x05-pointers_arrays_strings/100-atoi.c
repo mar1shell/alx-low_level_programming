@@ -8,7 +8,7 @@
 
 int _atoi(char *s)
 {
-	int i, sign, result;
+	int i, sign, result, a;
 
 	sign = 1;
 	result = 0;
@@ -20,7 +20,10 @@ int _atoi(char *s)
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		if (*(s + i) <= '9' && *(s + i) >= '0')
-			result = result * 10 + *(s + i);
+		{
+			a = (int) (*(s + i) - '0')
+			result = result * 10 + a;
+		}
 	}
 	return (sign * result);
 }
