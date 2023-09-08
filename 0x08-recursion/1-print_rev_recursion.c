@@ -6,16 +6,15 @@
  * Return: void
  */
 
+void recurse(char *s, int length)
+{
+	if (length < 0)
+		return;
+	_putchar(*(s + length));
+	recurse(s, length - 1);
+}
+
 void _print_rev_recursion(char *s)
 {
-	int i, a;
-
-	a = 0;
-	i = 0;
-	while (*(s + i) != (char) 0)
-	{
-		i++;
-		a++;
-	}
-	_putchar(
-
+	recurse(s, (int) sizeof(s));
+}
