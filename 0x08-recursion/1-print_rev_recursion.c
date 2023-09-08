@@ -8,9 +8,9 @@
 
 void recurse(char *s, int length)
 {
-	if (length < 0)
+	if (length <= 0)
 		return;
-	_putchar(*(s + length));
+	_putchar(*(s + length - 1));
 	recurse(s, length - 1);
 }
 
