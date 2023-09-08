@@ -28,6 +28,6 @@ int main(int argc, char *argv[])
 		r += a / changes[i];
 		a %= changes[i];
 	}
-	printf("%d", r);
+	printf("%d\n", r);
 	return (0);
 }
