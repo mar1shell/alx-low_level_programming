@@ -3,7 +3,7 @@
 /**
  * isprime - checks if n is prime
  * @n: int
- * @i: int
+ * @a: int
  * Return: 1 if prime; else 0
  */
 
