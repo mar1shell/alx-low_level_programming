@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - entry point
@@ -9,8 +11,25 @@
 
 int main(int argc, char *argv[])
 {
-	int r, i, num, items;
+	int a, r, i;
 
-	for (i = 0; i < argc; i++)
+	r = 0;
+	for (i = 1; i < argc; i++)
 	{
-		if 
+		char *c = argv[i];
+
+		while (*c)
+		{
+			if (!isdigit(*c))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			c++;
+		}
+		a = atoi(argv[i]);
+		r += a;
+	}
+	printf("%d\n", r);
+	return (0);
+}
