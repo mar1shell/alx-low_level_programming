@@ -23,16 +23,3 @@ int wildcmp(char *s1, char *s2) {
     return cmp(s1, s2, 0, 0);
 }
 
-int main() {
-    char str1[] = "hello";
-    char str2[] = "h*o";
-    int result = wildcmp(str1, str2);
-
-    if (result) {
-        printf("Strings match!\n");
-    } else {
-        printf("Strings do not match.\n");
-    }
-
-    return 0;
-}
