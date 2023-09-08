@@ -1,20 +1,34 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * _print_rev_recursion - reverse a strings
  * @s: string
  * Return: void
  */
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; *(s + i) != '\0'; i++)
+	{
+	}
+	return (i); 
+}
 
 void recurse(char *s, int length)
 {
 	if (length <= 0)
 		return;
-	_putchar(*(s + length - 1));
+	printf("%c", *(s + length - 1));
 	recurse(s, length - 1);
 }
 
 void _print_rev_recursion(char *s)
 {
-	recurse(s, (int) sizeof(s));
+	recurse(s, _strlen(s));
+}
+
+int main()
+{
+	_print_rev_recursion("\nFirst, solve the problem. Then, write the code");
 }
