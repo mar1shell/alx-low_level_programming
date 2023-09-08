@@ -13,11 +13,11 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		puts("Error\n");
+		printf("Error\n");
 		return (1);
 	}
-	sscanf(argv[1], "%d", &a);
-	sscanf(argv[2], "%d", &b);
+	if (sscanf(argv[1], "%d", &a) != 1 || sscanf(argv[2], "%d", &b) != 1)
+		return (1);
 	printf("%d\n", a * b);
 	return (0);
 }
