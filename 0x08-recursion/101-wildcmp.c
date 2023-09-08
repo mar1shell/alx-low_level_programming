@@ -6,8 +6,7 @@
 
 int cmp(char *s1, char *s2, int i, int j)
 {
-	if (*
-			(s1 + i) != '\0') 
+	if (*(s1 + i) != '\0') 
 		return 0;
 	if (*(s2 + j) == '*')
 	{
@@ -15,8 +14,9 @@ int cmp(char *s1, char *s2, int i, int j)
 		{
 			j++;
 		}	
-	while (*(s1 + i) != '\0') {
-			return cmp(s1, s2, i++, j); 
+		while (*(s1 + i) != '\0') 
+		{
+			return (cmp(s1, s2, i++, j)); 
 		}
 	}
 	if (*(s1 + i) == *(s2 + j))
