@@ -37,17 +37,23 @@ char *str_concat(char *s1, char *s2)
 	cs = malloc(sizeof(char) * (len + 1));
 	if (cs == NULL)
 		return (NULL);
-	while (*s1 != '\0')
+	if (s1 != NULL)
 	{
-		*cs = *s1;
-		cs++;
-		s1++;
+		while (*s1 != '\0')
+		{
+			*cs = *s1;
+			cs++;
+			s1++;
+		}
 	}
-	while (*s2 != '\0')
+	if (s2 != NULL)
 	{
-		*cs = *s2;
-		cs++;
-		s2++;
+		while (*s2 != '\0')
+		{
+			*cs = *s2;
+			cs++;
+			s2++;
+		}
 	}
 	*cs = '\0';
 	cs -= len;
