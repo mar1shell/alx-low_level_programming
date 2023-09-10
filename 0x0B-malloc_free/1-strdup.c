@@ -25,17 +25,17 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	char *cp = NULL;
-
-	int i, len;
-
-	len = _strlen(str);
 	if (str == NULL)
 		return (NULL);
+	char *cp = NULL;
+
+	int len;
+
+	len = _strlen(str);
 	cp = malloc(sizeof(char) * (len + 1));
 	if (cp == NULL)
 		return (NULL);
-	for (i = 0; i < len; i++)
+	while (*str != '\0')
 	{
 		*cp = *str;
 		str++;
