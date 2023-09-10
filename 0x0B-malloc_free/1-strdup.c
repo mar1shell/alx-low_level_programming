@@ -25,9 +25,9 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
+	char *cp = NULL;
 	if (str == NULL)
 		return (NULL);
-	char *cp = NULL;
 
 	int len;
 
