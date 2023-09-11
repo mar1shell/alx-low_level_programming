@@ -8,9 +8,9 @@
  * Return: length of s
  */
 
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
@@ -31,11 +31,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cs = NULL;
 
-	int i, j, len, len1, len2;
+	unsigned int i, j, len, len1, len2;
 
 	len1 = (s1 == NULL) ? 0 : _strlen(s1);
 	len2 = (s2 == NULL) ? 0 : _strlen(s2);
 	len2 = (n < len2) ? n : len2;
+	len = len1 + len2;
 	cs = malloc(sizeof(char) * (len + 1));
 	if (cs == NULL)
 		return (NULL);
