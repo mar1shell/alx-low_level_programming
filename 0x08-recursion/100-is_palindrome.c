@@ -25,9 +25,13 @@ int is_palindrome(char *s) {
         return 1;
     }
 
-    int start = 0;
-    int end = length - 1;
+    int start;
 
+    int end;
+
+    end = length - 1;
+
+    start = 0;
     while (start < end) {
         while (start < length && !is_alphanumeric(s[start])) {
             start++;
