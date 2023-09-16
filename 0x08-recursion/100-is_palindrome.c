@@ -1,49 +1,64 @@
-#include "main.h"
+#include <stdio.h>
+#include <string.h>
 
-/**
- * _strlen - length of a tring
- * @s: string
- * Return: length of s
- */
+int is_palindrome(char *s);
 
-int _strlen(char *s)
-{
-	int i, r;
-
-	for (i = 0; *(s + i) != (char) 0; i++)
-	{
-		r++;
-	}
-	return (r);
+int is_alphanumeric(char c) {
+    return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'));
 }
 
-/**
- * ispal - checks if a string is a palindrome
- * @s: string
- * @left: int
- * @right: int
- * Return: 1 if palindrome; else 0
- */
+int recursive_palindrome(char *s, int start, int end) {
+    if (start >= end) {
+        return 1;
+    }
 
-int ispal(char *s, int left, int right)
-{
-	if (left >= right)
-		return 1;
-	if (*(s+left) == *(s+right) && ispal(s, left+1, right-1) == 1){
-		return 1;
-	}
-	return 0;
+    if (s[start] != s[end]) {
+        return 0;
+    }
+
+    return recursive_palindrome(s, start + 1, end - 1);
 }
 
-/**
- * is_palindrome - checks if a string is a palindrome
- * @s: string
- * Return: 1 if palindrome; else 0
- */
+int is_palindrome(char *s) {
+    int length = strlen(s);
+    if (length <= 1) {
+        return 1;
+    }
 
-int is_palindrome(char *s)
-{
-	int length = _srtlen(s);
-	ispal(s, 0, length-1);
+    int start = 0;
+    int end = length - 1;
+
+    while (start < end) {
+        while (start < length && !is_alphanumeric(s[start])) {
+            start++;
+        }
+        while (end >= 0 && !is_alphanumeric(s[end])) {
+            end--;
+        }
+
+        if (start < length && end >= 0) {
+            if (s[start] != s[end]) {
+                return 0;
+            }
+            start++;
+            end--;
+        }
+    }
+
+    return 1;
+}
+
+int main(void) {
+    int r;
+
+    r = is_palindrome("level");
+    printf("%d\n", r);
+    r = is_palindrome("redder");
+    printf("%d\n", r);
+    r = is_palindrome("test");
+    printf("%d\n", r);
+    r = is_palindrome("step on no pets");
+    printf("%d\n", r);
+    return 0;
 }
 
