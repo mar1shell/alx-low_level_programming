@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main-entry point
+ * Return: 0
+ */
+
 int main(void)
 {
 	int i, j, k;
@@ -22,5 +27,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return 0;
+	return (0);
 }
