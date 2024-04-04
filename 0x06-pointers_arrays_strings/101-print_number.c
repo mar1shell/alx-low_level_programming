@@ -28,6 +28,7 @@ void print_number(int n)
 {
 	int len = 1, curr, currPow, i;
 	unsigned int m = (n > 0) ? n : -n, o = m;
+
 	if (n < 0)
 	{
 		_putchar('-');
