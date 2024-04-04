@@ -26,23 +26,22 @@ int _pow(int E, int x)
 
 void print_number(int n)
 {
-	int len = 1, m = n, curr, currPow, i;
-
-	while (m / 10)
-	{
-		len++;
-		m /= 10;
-	}
+	int len = 1, curr, currPow, i;
+	unsigned int m = (n > 0) ? n : -n, o = m;
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+	}
+	while (o / 10)
+	{
+		len++;
+		o /= 10;
 	}
 	for (i = 0; i < len; i++)
 	{
 		currPow = _pow(10, len - 1 - i);
-		curr = n / currPow;
-		n %= currPow;
+		curr = m / currPow;
+		m %= currPow;
 		_putchar(curr + '0');
 	}
 }
