@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _pow - power of E to x
  * @E: exponent
@@ -36,7 +35,7 @@ void print_number(int n)
 	}
 	if (n < 0)
 	{
-		_putchar("-");
+		_putchar('-');
 		n = -n;
 	}
 	for (i = 0; i < len; i++)
@@ -44,6 +43,6 @@ void print_number(int n)
 		currPow = _pow(10, len - 1 - i);
 		curr = n / currPow;
 		n %= currPow;
-		_putchar(c + '0');
+		_putchar(curr + '0');
 	}
 }
